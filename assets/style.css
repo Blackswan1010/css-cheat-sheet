@@ -1,3 +1,44 @@
 :root {
-    
+    --color: purple;
+    --color2: white;
+    --radius: 5px;
+    --bg: black;
+    --snippets-bg: violet;
+}
+
+* {
+    background-color: var(--bg);
+}
+
+header h1 {
+    color: var(--color);
+}
+
+header p {
+    color: var(--color2);
+}
+
+h2 {
+    color: var(--color);
+    border: 2px solid var(--color2);
+    border-radius: var(--radius);
+    position: relative;
+    margin: -20px 0;
+}
+
+p {
+    color: var(--color);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+section {
+    border: 2px dashed var(--color2);
+    padding: 10px;
+    margin: 50px;
+    flex: 1 1 100px;
 }
