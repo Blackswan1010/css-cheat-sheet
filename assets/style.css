@@ -1,44 +1,127 @@
 :root {
-    --color: purple;
-    --color2: white;
-    --radius: 5px;
-    --bg: black;
+    --brightpink: rgb(207, 2, 207);
+    --white: white;
+    --radius: 7px;
+    --bg: rgb(73, 71, 71);
     --snippets-bg: violet;
+    --css-font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-* {
+/* *{
+    height: 100%;
+    width: 100%;
+} */
+
+body {
     background-color: var(--bg);
 }
 
+header {
+    height: 100%;
+    width: 100%;
+}
+
 header h1 {
-    color: var(--color);
+    color: var(--brightpink);
+    height: 100%;
+    text-align: center;
 }
 
 header p {
-    color: var(--color2);
+    color: var(--white);
+    text-align: center;
 }
 
 h2 {
-    color: var(--color);
-    border: 2px solid var(--color2);
+    color: var(--brightpink);
+    border: 2px solid var(--white);
     border-radius: var(--radius);
+    background-color: var(--bg);
     position: relative;
-    margin: -20px 0;
-}
-
-p {
-    color: var(--color);
-}
-
-main {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
-section {
-    border: 2px dashed var(--color2);
+    margin: -30px 0;
     padding: 10px;
-    margin: 50px;
-    flex: 1 1 100px;
+    z-index: 1;
 }
+
+.grid {
+    display: grid;
+    color: var(--white);
+    width: 100%;
+    row-gap: 10px;
+    column-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+}
+
+
+.grid .card {
+    display: flex;
+    flex-direction: column;
+    border: 2px dashed var(--white);
+    padding: 10px;
+    margin: 5px;
+    flex: 2 2 200px;
+    color: var(--brightpink);
+    height: 90%;
+    width: 90%;
+    transition: background-color 2s;
+}
+
+.card:hover {
+    background-color:black;
+}
+
+.card p {
+    padding-top: 20px;
+}
+
+.grid .card .snippet { 
+    background-image: linear-gradient(rgba(232, 102, 236, 0.3) 0%,
+    rgba(232, 102, 236, 0.6)100%);
+    border-radius: var(--radius);
+    color: var(--white);
+    text-align: left;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    padding-left: 50px;
+    user-select: all;
+}
+
+.grid .card .snippet .indent {
+    margin-left: 5px;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+}
+
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    color: var(--brightpink);
+}
+
+@media screen and (max-width:1280px){
+    .grid {
+        row-gap: 10px;
+        column-gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width:800px){
+    .grid {
+        row-gap: 10px;
+        column-gap: 10px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+}
+
+

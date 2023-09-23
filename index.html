@@ -1,46 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8"/>
-        <title> CSS Cheat Sheet</title>
-        <link rel="stylesheet" href="./assets/style.css"/>
-    </head>
 
-    <body>
-        <header>
-            <h1>CSS Snippet Cheatsheet</h1>
-            <p>Ever have trouble recalling the exact syntax for your favorite CSS code? Give it a permanent home and add it to this page! Select any snippet below and it'll automatically select all the code for you to copy.</p>
-        </header>
-        <main>
-            <section>
-                <h2>Flexbox Row</h2>
-                <p>use these three properties to create a flexbox row layout.</p>
-            </section>
-            <section>
-                <h2>Flexbox Column</h2>
-                <p>Use this to create a Flexbox column layout.</p>
-            </section>
-            <section>
-                <h2>CSS Gridlayout</h2>
-                <p>Build a 12-column layout using CSS grid.</p>
-            </section>
-            <section>
-                <h2>Linear Gradients</h2>
-                <p>This will create a background linear gradient from top to bottom.</p>
-            </section>
-            <section>
-                <h2>Box Transition Glow</h2>
-                <p>Use transition and box shadows to glow on hover</p>
-            </section>
-            <section>
-                <h2>Overlay Card with Title</h2>
-                <p>Use position properties and negative margins to raise elements higher than their natural starting point.</p>
-            </section>
-        </main>
+<head>
+    <meta charset="UTF-8" />
+    <title> CSS Cheat Sheet</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+</head>
 
-        <footer>
-            <h3>Made with "heart emoji" and CSS</h3>
-        </footer>
-    </body>
+<body>
+    <header>
+        <h1>CSS Snippet Cheatsheet</h1>
+        <p>Ever have trouble recalling the exact syntax for your favorite CSS code? Give it a permanent home and add it
+            to this page! Select any snippet below and it'll automatically select all the code for you to copy.</p>
+    </header>
+    <main class="grid">
+        <section class="card">
+            <h2>Flexbox Row</h2>
+            <p>Use these three properties to create a flexbox row layout.</p>
+            <section class="snippet">
+                <p>
+                <pre>
+.row { 
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap;
+}
+                    </pre>
+                </p>
+            </section>
+        </section>
+        <section class="card">
+            <h2>Flexbox Column</h2>
+            <p>Use this to create a Flexbox column layout.</p>
+            <section class="snippet">
+                <p>
+                <pre>
+.column { 
+    display: flex; 
+    flex-direction: column; 
+}
+                    </pre>
+                </p>
+            </section>
+        </section>
+        <section class="card">
+            <h2>CSS Gridlayout</h2>
+            <p>Build a 12-column layout using CSS grid.</p>
+            <section class="snippet">
+                <p>
+                <pre>
+.grid { 
+    display: flex; 
+    width: 100%
+    grid-template-columns:
+repeat(12, 1fr)
+}
+                    </pre>
+                </p>
+            </section>
+        </section>
+        <section class="card">
+            <h2>Linear Gradients</h2>
+            <p>This will create a background linear gradient from top to bottom.</p>
+            <section class="snippet">
+                <p>
+                <pre>
+.linear-gradient-background { 
+    (rgba(232, 102, 236, 0.3) 0%,
+    rgba(232, 102, 236, 0.6) 100%
+    );
+}
+                    </pre>
+                </p>
+            </section>
+        </section>
+        <section class="card">
+            <h2>Box Transition Glow</h2>
+            <p>Use transition and box shadows to glow on hover</p>
+            <section class="snippet">
+                <p>
+                <pre>
+.code-card .code-header { 
+    border-radius: 8px;
+    transition: all 0.5s ease-in-
+    out;
+}
+
+.code-card:hover,
+.code-card:hover .card-header {
+    box-shadow: inset 0px 0px 8px
+rgba(232,102,236, 1), 0 0 15px
+rgba(232,102,236, 1)
+}
+                    </pre>
+                </p>
+            </section>
+        </section>
+        <section class="card">
+            <h2>Overlay Card with Title</h2>
+            <p>Use position properties and negative margins to raise elements higher than their natural starting point.
+            </p>
+            <section class="snippet">
+                <p>
+                <pre>
+.card-header { 
+    position: relative;
+    margin-top: -20px;
+}
+                    </pre>
+                </p>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <h3>Made with "heart emoji" and CSS</h3>
+    </footer>
+</body>
 
 </html>
